@@ -11,8 +11,10 @@ const loadImages = async () => {
             <div class="profile"><img src="image.JPG" alt="">
             <p class="name">${_data.title}</p>
             <p>ID - <b>${_data.id}</b></p>
-            <button id="button1">Book me</button>
-            <button id="button2">View profile</button>
+            <div class="buttons">
+            <button class="btn1" id="button1">Book me</button>
+            <button class="btn2" id="button2">View profile</button>
+            </div>
             </div>
       `
             })

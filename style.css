@@ -45,18 +45,24 @@ h3 {
 .container {
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+
 }
 .album {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-flow: row wrap;
+
 }
 .profile {
     background-color:#ffffff;
     width: 30%;
-    height: 420px;
+    height: 450px;
     margin: 10px;
     border-radius: 5px;
+    flex: 1 1 20% ;
 }
 .profile:hover {
     opacity: 0.75;
@@ -65,7 +71,7 @@ img {
     height: 180px;
     width: 200px;
     border-radius: 50%;
-    margin:20px 0px 0px 80px;
+    margin: 20px 0px 0px 20px;
 }
 .name {
     text-align: center;
@@ -73,16 +79,58 @@ img {
     font-weight: 500;
     color: gray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 30px;
+    padding-top: 25px;
     
 }
-#button1 {
-    width: 100px;
-    height: 50px;
-    margin: 100px 0px 0px 60px;
+.buttons {
+    text-align: center;
 }
-#button2 {
-    width: 100px;
-    height: 50px;
-    margin: 100px 0px 0px 0px;
+.btn1, .btn2 {
+    padding: 10px;
+    display: inline-block;
+    margin-top: 5%;
+}
+
+@media only screen and (max-width:600px) {
+    nav {
+        width: 90%;
+        margin: 0px auto;
+        text-align: right;
+    }
+    nav ul {
+        width: 99%;
+        margin-top: 30px;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li a {
+        font-size: 1.2em;
+        margin: 0px 4px;
+        letter-spacing: 0px;
+    }
+    
+    .album {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .profile {
+        background-color:#ffffff;
+        min-width: 95%;
+        height: 500px;
+        border-radius: 5px;
+    }
+    img {
+        height: 190px;
+        min-width:20%;
+        border-radius: 50%;
+        margin: 8% 0 0 19%;
+    }
+    
+    .btn1, .btn2 {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    
 }
